@@ -34,3 +34,4 @@ puts greet("japan")
 
 str = "hello"
 puts "oh,#{str}"
+puts "oh, \"#{str}\""
