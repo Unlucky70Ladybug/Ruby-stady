@@ -31,3 +31,6 @@ def greet(country)
 end
 puts greet(nil)
 puts greet("japan")
+
+str = "hello"
+puts "oh,#{str}"
