@@ -11,9 +11,21 @@ TEXT
 
 def ok?(status)
   unless status == "ok"
-    return "何か異常があります"
+    "何か異常があります"
   else
-    return "正常です"
+    "正常です"
   end
 end
 puts ok?("良いですか？")
+
+def where(country)
+  case
+  when country == "japan"
+    "こんにちは"
+  when country =="us"
+    "hello"
+  else
+    "????"
+  end
+end
+puts where("us")
