@@ -57,3 +57,6 @@ puts a
 a = Array.new(5, "default")
 a[1] = "easy"
 puts a
+
+fruits = ["apple", "orange", "melon"]
+fruits.each_with_index{|fruit, i| puts "#{i}:#{fruit}"}
