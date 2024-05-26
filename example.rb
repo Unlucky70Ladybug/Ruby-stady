@@ -9,3 +9,12 @@ loop do
 =end
   break if n ==5
 end
+
+fruits = ["apple", "melon", "orange"]
+numbers = [4,5,6]
+fruits.each do |fruit|
+  numbers.shuffle.each do |n|
+    puts "#{fruit}, #{n}"
+    break if n == 4
+  end
+end
