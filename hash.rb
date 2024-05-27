@@ -25,3 +25,26 @@ person = {
 puts person[:age]
 puts person[:friends]
 puts person[:phones][:mobile]
+puts
+
+a = :test
+puts a.class
+puts
+
+h = {test: :mono}
+if h.has_key?(:test)
+  puts "yes, #{h[:test]}"
+else
+  puts "no"
+end
+
+h = Hash.new{"hello"}
+puts h
+a = h[:foo]
+a = h[:foo2]
+
+puts a
+
+
+str = "Alice"
+puts person[:name] == str
