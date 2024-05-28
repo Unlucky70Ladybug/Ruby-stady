@@ -4,3 +4,8 @@ m = /(?<year>\d+)年の(?<month>\d+)月(?<day>\d+)日/.match(text)
 pp m[:year]
 pp m[:month]
 pp m[:day]
+
+text =~ /(?<year>\d+)年の(?<month>\d+)月(?<day>\d+)日/
+puts $~
+puts $&
+puts $1
