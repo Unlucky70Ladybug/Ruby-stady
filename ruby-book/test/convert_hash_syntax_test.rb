@@ -21,7 +21,6 @@ class ConvertHashSyntax < Minitest::Test
     TEXT
 
     actual = convert_hash_syntax(old_syntax)
-    puts actual
     assert_equal expected , actual
   end
 end
