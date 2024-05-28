@@ -9,3 +9,7 @@ text =~ /(?<year>\d+)年の(?<month>\d+)月(?<day>\d+)日/
 puts $~
 puts $&
 puts $1
+
+text.gsub(/(\d+)年の(\d+)月(\d+)日/) do
+  puts "#{$1}-#{$2}-#{$3}"
+end
