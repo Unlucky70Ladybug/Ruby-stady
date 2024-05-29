@@ -38,3 +38,40 @@ class Bar < Foo
 end
 Foo.hello
 Bar.hello
+
+class Test
+  attr_reader :name
+
+  def initialize(name,price)
+    @name = name
+    @price = price
+  end
+end
+testA = Test.new("taro", 10)
+puts testA.name
+puts
+
+class User
+  attr_reader :name
+  protected attr_reader :weight
+  def initialize(name, weight)
+    @name = name
+    @weight = weight
+  end
+
+  def heavier_than?(other_user)
+    other_user.weight < @weight
+  end
+
+  protected
+  def weight
+    @weight
+  end
+
+end
+
+alice = User.new("Alice", 50)
+bob = User.new("Bob", 60)
+puts alice.heavier_than?(bob)
+puts bob.heavier_than?(alice)
+#alice.weight
