@@ -27,3 +27,14 @@ dvd = DVD.new("A great DVD", 1000, 120)
 puts dvd.name
 puts dvd.price
 puts dvd.running_time
+
+class Foo
+  def self.hello
+    puts "hello!!"
+  end
+end
+
+class Bar < Foo
+end
+Foo.hello
+Bar.hello
