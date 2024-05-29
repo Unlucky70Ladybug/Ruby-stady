@@ -25,3 +25,19 @@ users = User.create_users(names)
 users.each  do |user|
   puts user.hello
 end
+users[0].name
+users[1].name
+users[2].name
+
+class Product
+  DEFAULT_PRICE = 0
+  attr_reader :name, :price
+  def initialize(name, price = DEFAULT_PRICE)
+    @name = name
+    @price = price
+  end
+end
+product = Product.new("A free move")
+
+puts product.name
+puts product.price
