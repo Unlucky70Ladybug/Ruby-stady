@@ -41,6 +41,7 @@ module Loggable
     puts "[LOG] #{text}"
   end
   module_function :log
+  #module_functionの関数はミックスインをすると、自動にprivateメゾットになる
 end
 
 class Product
