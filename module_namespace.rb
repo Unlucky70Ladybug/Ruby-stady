@@ -35,3 +35,20 @@ clock = Clock::Second.new(13)
 second = Baseball2::Second.new
 second.file_with_nesting
 second.file_without_nesting
+
+module Loggable
+  def log(text)
+    puts "[LOG] #{text}"
+  end
+  module_function :log
+end
+
+class Product
+  include Loggable
+  def title
+    log("title is called.\nA great movie")
+  end
+end
+Loggable.log("hello")
+product = Product.new
+product.title
