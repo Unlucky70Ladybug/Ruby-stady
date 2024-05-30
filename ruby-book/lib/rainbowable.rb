@@ -12,7 +12,4 @@ module Rainbowable
     ret = colored_chars.join
     ret + "\e[0m]"
   end
-
-  puts "Hello, world!".rainbow
-  puts [1,2,3].rainbow
 end
