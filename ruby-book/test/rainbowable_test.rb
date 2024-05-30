@@ -7,7 +7,7 @@ class RainbowableTest < Minitest::Test
     Array.include Rainbowable
   end
 
-  def test_rainbowable
+  def test_rainbow
     expected = "\e[31mH\e[32me\e[33ml\e[34ml\e[35mo\e[36m,\e[31m \e[32mw\e[33mo\e[34mr\e[35ml\e[36md\e[31m!\e[0m"
     assert_equal expected, 'Hello, world!'.rainbow
 
