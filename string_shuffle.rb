@@ -1,5 +1,7 @@
 module StringShuffle
   refine String do
-    char.shuffle.join
+    def shuffle
+      chars.shuffle.join
+    end
   end
 end
