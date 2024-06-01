@@ -5,7 +5,15 @@ using StringShuffle
 puts "Alice".shuffle
 class User
   using StringShuffle
-  def initialize
-    @user = user
+  def initialize(name)
+    @name = name
+  end
+
+  def shuffled_name
+    @name.shuffle
   end
 end
+
+user =User.new("Alice")
+puts user.shuffled_name
+puts "Takakura".shuffle
