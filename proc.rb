@@ -13,5 +13,12 @@ end
 shuffle_proc = Proc.new{|text| text.chars.shuffle.join}
 repeat_proc = Proc.new{|text| text * 2}
 question_proc = Proc.new{|text| "#{text}?"}
-
 greet(shuffle_proc,repeat_proc,question_proc)
+
+add_lamda = ->(a,b){a.to_i + b.to_i}
+#ラムダは引数について厳密なので、引数が丁度２つないとエラーが出る
+=begin
+例
+add_lamda.call(10)
+add_lamda.call(10,20,30)
+=end
