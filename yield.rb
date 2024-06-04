@@ -22,6 +22,18 @@ def greet
   puts "こんばんは"
 end
 
+def greet
+  puts "おはよう"
+  text = yield "こんにちは",12345
+  puts text
+  puts "こんばんは"
+end
+
 greet do |text|
   text * 2
+end
+puts
+
+greet do |text, other|
+  text * 2 + other.inspect
 end
