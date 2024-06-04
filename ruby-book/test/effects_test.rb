@@ -12,6 +12,6 @@ class EffectTest < Minitest::Test
     assert_equal "RRuubbyy iiss ffuunn!!", effect.call("Ruby is fun!")
 
     effect = Effects.echo(3)
-    assert_equal "RRRuuubbbyyy iiissss fffuuunnn!!!", effect.call("Ruby is fun!")
+    assert_equal "RRRuuubbbyyy iiisss fffuuunnn!!!", effect.call("Ruby is fun!")
   end
 end
