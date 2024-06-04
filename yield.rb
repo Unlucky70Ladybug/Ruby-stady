@@ -15,6 +15,7 @@ puts
 
 def greet
   puts "おはよう"
+  #「こんにちは」が引数
   text = yield "こんにちは"
 
   puts text
