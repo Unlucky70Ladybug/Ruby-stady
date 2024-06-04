@@ -10,7 +10,7 @@ class WordSynth
   def play(original_words)
     words = original_words
     @effects.each do |effect|
-      words = effect.all(words)
+      words = effect.call(words)
     end
     words
   end
