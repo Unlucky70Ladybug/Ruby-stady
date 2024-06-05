@@ -10,8 +10,8 @@ module LogFomatter
 
     log_data.map do |log|
       case log
-      in {request_id:, path:, status: 404, error:}
-        "[ERROR] request_id=#{request_id}, path=#{path}, status=404, error=#{error}"
+      in {request_id:, path:, status: 404 | 500 => status_number, error:}
+        "[ERROR] request_id=#{request_id}, path=#{path}, status=#{status_number}, error=#{error}"
       in {request_id:,path:, duration: 1000.. => duration_num}
         "[WARN] request_id=#{request_id}, path=#{path}, duration=#{duration_num}"
       in {request_id:, path:}
