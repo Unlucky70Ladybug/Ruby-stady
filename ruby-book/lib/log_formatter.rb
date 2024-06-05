@@ -8,10 +8,12 @@ module LogFomatter
     json = Net::HTTP.get(uri)
     log_data = JSON.parse(json, symbolize_names: true)
 
-    log_data.amp do |log|
+    log_data.map do |log|
       case log
+      in {request_id:, path:, status: 404, error:}
+        "[ERROR] request_id=#{request_id}, path=#{path}, status=404, error=#{error}"
       in {request_id:, path:}
-      "[OK] request_id=#{request_id}, path=#{path}"
+        "[OK] request_id=#{request_id}, path=#{path}"
       end
     end.join("\n")
   end
