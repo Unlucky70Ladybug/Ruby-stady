@@ -12,6 +12,8 @@ module LogFomatter
       case log
       in {request_id:, path:, status: 404, error:}
         "[ERROR] request_id=#{request_id}, path=#{path}, status=404, error=#{error}"
+      in {request_id:,path:, duration: 1000.. => duration_num}
+        "[WARN] request_id=#{request_id}, path=#{path}, duration=#{duration_num}"
       in {request_id:, path:}
         "[OK] request_id=#{request_id}, path=#{path}"
       end
