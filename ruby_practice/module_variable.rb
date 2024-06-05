@@ -53,8 +53,10 @@ puts test1.age
 puts test1.puts_base_url
 puts test1.update_base_url("https://new/url.com")
 puts test1.puts_base_url
+#AwesomeApiモジュールのbalse_url自体が変わってしまった。これはクラスとの違い？
 puts "-------------------------------------------------"
 puts AwesomeApi.base_url
+
 puts "-------------------------------------------------"
 #設定値を保存
 AwesomeApi.base_url = "https://example.com"
