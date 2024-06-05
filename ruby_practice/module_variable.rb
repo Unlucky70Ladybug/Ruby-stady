@@ -53,7 +53,11 @@ puts test1.age
 puts test1.puts_base_url
 puts test1.update_base_url("https://new/url.com")
 puts test1.puts_base_url
-#AwesomeApiモジュールのbalse_url自体が変わってしまった。これはクラスとの違い？
+=begin
+クラスインスタンス変数@base_urlは、モジュール自体のクラスインスタンス変数です。
+これが更新されると、モジュールをインクルードしているすべてのクラスでその変更が反映されます。
+=end
+
 puts "-------------------------------------------------"
 puts AwesomeApi.base_url
 
